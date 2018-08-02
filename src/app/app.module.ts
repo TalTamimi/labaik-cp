@@ -1,5 +1,6 @@
+import { CoreModule } from './components/core.module';
 import { AuthService } from './services/auth.service';
-import { environment } from './../environments/environment';
+import { environment } from '../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -7,14 +8,15 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import { RouterModule } from '../../node_modules/@angular/router';
+import { RouterModule } from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {MatInputModule} from '@angular/material/input';
+import { ROUTES } from './app.routes';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,8 +25,8 @@ import {MatInputModule} from '@angular/material/input';
     AngularFireAuthModule,
     RouterModule.forRoot([]),
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatInputModule
+    CoreModule,
+    RouterModule.forRoot(ROUTES),
   ],
   providers: [
     AuthService

@@ -8,11 +8,16 @@ import { Component } from '@angular/core';
   providers: [AuthService]
 })
 export class AppComponent {
-  title = 'nsk-cp';
+
+  fullView = false;
 
   constructor(
     private authService: AuthService
-  ) {}
+  ) {
+    setTimeout(() => {
+      this.fullView = true;
+    }, 4000);
+  }
 
   signInWithEmail() {
     this.authService.signInWithEmail();

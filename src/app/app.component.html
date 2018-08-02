@@ -1,4 +1,4 @@
-<button type="button" class="btn btn-block" (click)="signInWithEmail()">
+<!-- <button type="button" class="btn btn-block" (click)="signInWithEmail()">
   <i class="fa fa-twitter" aria-hidden="true"></i>
      Login with Twitter
 </button>
@@ -11,4 +11,15 @@
   <mat-form-field class="example-full-width">
     <textarea matInput placeholder="Leave a comment"></textarea>
   </mat-form-field>
-</form>
+</form> -->
+
+<div class="labyek" [ngClass]="{'full-view': fullView}">
+  <app-background [hide]="fullView"></app-background>
+  <div class="container">
+    <app-logo></app-logo>
+    <div class="view">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from "@angular/router";
 import { AngularFireAuth } from 'angularfire2/auth';
-import * as firebase from 'firebase/app';
+import * as firebase from 'firebase';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -18,9 +18,7 @@ constructor(private _firebaseAuth: AngularFireAuth, private router: Router) {
     return this._firebaseAuth.auth.signInWithEmailAndPassword('admin@labaik.com', '123456');
   }
 
-  signInWithTwitter() {
-    return this._firebaseAuth.auth.signInWithPopup(
-      new firebase.auth.TwitterAuthProvider()
-    )
+  signOut() {
+    return this._firebaseAuth.auth.signOut();
   }
 }

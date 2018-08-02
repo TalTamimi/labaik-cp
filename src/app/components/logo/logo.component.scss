@@ -1,0 +1,21 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px 0;
+  .icon {
+    font-size: 32px;
+    color: #CBB12D;
+  }
+
+  .label {
+    color: #7A7A7A;
+  }
+
+  .splitter {
+    height: 23px;
+    width: 1px;
+    background: #E0E0E0;
+    margin: 0 12px;
+  }
+}

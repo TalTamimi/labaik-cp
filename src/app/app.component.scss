@@ -1,0 +1,16 @@
+.labyek{
+  overflow: hidden;
+  .container{
+    position: fixed;
+    width: 40%;
+    transition: all 1s;
+    left: 60%;
+    overflow: hidden;
+  }
+  &.full-view {
+    .container{
+      width: 100%;
+      left: 0;
+    }
+  }
+}
