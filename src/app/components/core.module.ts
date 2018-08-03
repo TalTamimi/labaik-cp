@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule, MatSelectModule} from '@angular/material';
 import { LandingComponent } from './landing/landing.component';
@@ -10,6 +11,7 @@ import { LoadingComponent } from './loading/loading.component';
 import {NotificationCpComponent} from './notification-cp/notification-cp.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {FormsModule} from '@angular/forms';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   imports: [
@@ -17,7 +19,8 @@ import {FormsModule} from '@angular/forms';
     MatButtonModule,
     MatInputModule,
     MatSelectModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   declarations: [
     LandingComponent,
@@ -26,7 +29,8 @@ import {FormsModule} from '@angular/forms';
     BackgroundComponent,
     LoadingComponent,
     NotificationCpComponent,
-    DashboardComponent
+    DashboardComponent,
+    NavComponent
   ],
   exports: [
     LandingComponent,
@@ -35,7 +39,9 @@ import {FormsModule} from '@angular/forms';
     BackgroundComponent,
     MatButtonModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    NavComponent,
+    RouterModule
   ]
 })
 export class CoreModule { }

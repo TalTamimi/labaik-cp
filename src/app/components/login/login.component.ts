@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
   signInWithEmail() {
     this.authService.signInWithEmail(this.user.email, this.user.password)
     .then((res) => {
-      this.router.navigate(['notification-cp']);
+      this.router.navigate(['dashboard']);
       this.sharedService.view.next(true);
     })
     .catch((err) => console.log(err));;

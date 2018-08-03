@@ -1,5 +1,11 @@
 .labyek{
   overflow: hidden;
+  .search{
+    font-size: 20px;
+    position: fixed;
+    left: 24px;
+    top: 38px;
+  }
   .container{
     position: fixed;
     width: 40%;
