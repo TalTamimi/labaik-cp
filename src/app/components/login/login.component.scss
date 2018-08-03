@@ -1,8 +1,18 @@
 .login{
+  height: 100vh;
+  .title{
+    color: #7a7a7a;
+    margin-bottom: 50px;
+    font-size: 18px;
+  }
   .form{
     display: flex;
     flex-direction: column;
-
+    max-width: 300px;
+    width: 100%;
+    .mat-flat-button.mat-primary{
+      background-color: #28958b;
+    }
     .full-width {
       width: 100%;
     }

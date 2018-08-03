@@ -1,33 +1,39 @@
-<div>
-  <mat-form-field>
-    <mat-select  placeholder="Nationality" [(value)]="selectedNationality">
-      <mat-option *ngFor="let nationality of nationalities; let i = index" [value]="i">{{nationality}}</mat-option>
-    </mat-select>
-  </mat-form-field>
+<div class="notifications">
+  <div class="center-middle column">
+    <div class="card">
+      <div class="title">Send Notification</div>
+      <div style="display: flex; flex-direction: row; justify-content: space-between;">
+        <mat-form-field>
+          <mat-select  placeholder="Nationality" [(value)]="selectedNationality">
+            <mat-option *ngFor="let nationality of nationalities; let i = index" [value]="i">{{nationality}}</mat-option>
+          </mat-select>
+        </mat-form-field>
 
-  <mat-form-field>
-    <mat-select placeholder="Age"  [(value)]="selectedAgeGroup">
-      <mat-option *ngFor="let age of ageGroup; let i = index" [value]="i">{{age}}</mat-option>
-    </mat-select>
-  </mat-form-field>
+        <mat-form-field>
+          <mat-select placeholder="Age"  [(value)]="selectedAgeGroup">
+            <mat-option *ngFor="let age of ageGroup; let i = index" [value]="i">{{age}}</mat-option>
+          </mat-select>
+        </mat-form-field>
 
-  <mat-form-field>
-    <mat-select placeholder="Group"  [(value)]="selectedGroup">
-      <mat-option value="Group 1">Group 1</mat-option>
-      <mat-option value="Group 2">Group 2</mat-option>
-      <mat-option value="Group 3">Group 3</mat-option>
-    </mat-select>
-  </mat-form-field>
-<br>
-  <mat-form-field >
-    <input [(ngModel)]="title" matInput placeholder="Title">
-  </mat-form-field>
-  <br>
+        <mat-form-field>
+          <mat-select placeholder="Group"  [(value)]="selectedGroup">
+            <mat-option value="Group 1">Group 1</mat-option>
+            <mat-option value="Group 2">Group 2</mat-option>
+            <mat-option value="Group 3">Group 3</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field >
+          <input [(ngModel)]="title" matInput placeholder="Title">
+        </mat-form-field>
+      </div>
 
-  <mat-form-field style="width: 50%">
-    <textarea rows="10" [(ngModel)]="body" matInput placeholder="Message"></textarea>
-  </mat-form-field>
-  <br>
-  <button (click)="sendNotification()" mat-button color="primary">Send Notification!</button>
+      <mat-form-field style="width: 100%">
+        <textarea rows="10" [(ngModel)]="body" matInput placeholder="Message"></textarea>
+      </mat-form-field>
+      <div style="text-align: center">
+      <button (click)="sendNotification()" mat-flat-button>Send Notification!</button>
+      </div>
+    </div>
+  </div>
 </div>
 

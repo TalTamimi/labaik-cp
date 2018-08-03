@@ -14,8 +14,8 @@ constructor(private _firebaseAuth: AngularFireAuth, private router: Router) {
       this.user = _firebaseAuth.authState;
   }
 
-  signInWithEmail() {
-    return this._firebaseAuth.auth.signInWithEmailAndPassword('admin@labaik.com', '123456');
+  signInWithEmail(email:string, password: string) {
+    return this._firebaseAuth.auth.signInWithEmailAndPassword(email, password);
   }
 
   signOut() {

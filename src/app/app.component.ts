@@ -1,5 +1,6 @@
+import { SharedService } from './services/shared.service';
 import { AuthService } from './services/auth.service';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,19 +8,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
   providers: [AuthService]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-  fullView = false;
+  fullView = true;
 
   constructor(
-    private authService: AuthService
+    // private authService: AuthService
+    private sharedService: SharedService
   ) {
-    setTimeout(() => {
-      this.fullView = true;
-    }, 4000);
+    // setTimeout(() => {
+    //   this.fullView = true;
+    // }, 4000);
   }
 
-  signInWithEmail() {
-    this.authService.signInWithEmail();
+  ngOnInit() {
+    this.sharedService.view.subscribe(
+      (res: boolean) => {
+        this.fullView = res;
+      }
+    );
   }
+
 }
