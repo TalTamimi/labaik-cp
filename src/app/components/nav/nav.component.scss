@@ -1,3 +1,4 @@
+@import './src/assets/style/colors.scss';
 .nav{
   position: fixed;
   top: 19px;
@@ -7,5 +8,13 @@
     display: flex;
     list-style: none;
     justify-content: space-around;
+    li{
+      &.active{
+        color: $bluish;
+      }
+      &:focus{
+        outline: 0;
+      }
+    }
   }
 }
