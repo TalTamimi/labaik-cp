@@ -10,13 +10,14 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { RouterModule } from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
-import {MatInputModule} from '@angular/material/input';
 import { ROUTES } from './app.routes';
+import {PushNotificationService} from './services/push-notification.service';
+import {HttpClientModule} from '@angular/common/http';
+import {UserService} from './services/user-service';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -27,9 +28,12 @@ import { ROUTES } from './app.routes';
     BrowserAnimationsModule,
     CoreModule,
     RouterModule.forRoot(ROUTES),
+    HttpClientModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    PushNotificationService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })
