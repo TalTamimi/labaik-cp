@@ -8,6 +8,7 @@ import { LogoComponent } from './logo/logo.component';
 import { BackgroundComponent } from './background/background.component';
 import { LoadingComponent } from './loading/loading.component';
 import {NotificationCpComponent} from './notification-cp/notification-cp.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import {FormsModule} from '@angular/forms';
 
 @NgModule({
@@ -24,7 +25,8 @@ import {FormsModule} from '@angular/forms';
     LogoComponent,
     BackgroundComponent,
     LoadingComponent,
-    NotificationCpComponent
+    NotificationCpComponent,
+    DashboardComponent
   ],
   exports: [
     LandingComponent,
