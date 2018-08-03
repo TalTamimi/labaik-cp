@@ -13,8 +13,8 @@ import { } from '@types/googlemaps';
     map: google.maps.Map;
     infowindow: any;
     location = {
-      latitude: 21.616980,
-      longitude: 39.156355
+      latitude: 21.414087,
+      longitude: 39.893085
     };
 
     constructor(private userService: UserService) {}
@@ -30,19 +30,20 @@ import { } from '@types/googlemaps';
       });
 
       this.userService.getUsers().subscribe((res: any) => {
-        console.log(res);
+        Object.values(res).forEach((user: any) => {
+          this.addMarker(user);
+        });
       });
-
-      this.addUserMarker('');
-
     }
 
-    addUserMarker(user) {
-      const latLng = new google.maps.LatLng(this.location.latitude, this.location.longitude);
-      const marker = new google.maps.Marker({
-        map: this.map,
-        position: latLng
-      });
+    addMarker(user) {
+      if (user.latitude && user.longitude) {
+        const latLng = new google.maps.LatLng(user.latitude, user.longitude);
+        const marker = new google.maps.Marker({
+          map: this.map,
+          position: latLng
+        });
+      }
     }
 
   }
