@@ -17,6 +17,10 @@
   <app-background [hide]="fullView"></app-background>
   <div class="container">
     <app-logo></app-logo>
+    <app-nav *ngIf="fullView"></app-nav>
+    <div class="search" *ngIf="fullView">
+      <i class="icons-navigation-drawer-1"></i>
+    </div>
     <div class="view">
       <router-outlet></router-outlet>
     </div>

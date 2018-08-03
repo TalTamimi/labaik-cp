@@ -5,4 +5,17 @@
 
 body{
   font-family: 'Roboto';
+  background: #f9f9f9;
+}
+
+.center-middle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.column{
+  flex-direction: column;
 }

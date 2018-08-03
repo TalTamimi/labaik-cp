@@ -1,0 +1,11 @@
+.nav{
+  position: fixed;
+  top: 19px;
+  right: 24px;
+  width: 400px;
+  ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+  }
+}

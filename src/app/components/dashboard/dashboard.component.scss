@@ -1,5 +1,10 @@
 #map {
-    width: 900px;
-    height: 600px;
-    margin-left: 50px;
+  position: fixed !important;
+  top: 100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: calc(100% - 100px);
+  background: rgba(0, 0, 0, 0.2)
 }

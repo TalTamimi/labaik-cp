@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import {UserService} from '../../services/user-service';
-import { } from '@types/googlemaps';
 
 @Component({
     selector: 'app-dashboard',

@@ -10,7 +10,7 @@ export const ROUTES: Routes = [
   {
     path: '',
     children: [
-      { path: '', redirectTo: 'loading', pathMatch: 'full'},
+      { path: '', redirectTo: 'login', pathMatch: 'full'},
       { path: 'loading', component: LoadingComponent},
       { path: 'login', component: LoginComponent},
       { path: 'notification-cp', component: NotificationCpComponent},

@@ -1,3 +1,4 @@
+import { SharedService } from './services/shared.service';
 import { CoreModule } from './components/core.module';
 import { AuthService } from './services/auth.service';
 import { environment } from '../environments/environment';
@@ -33,7 +34,8 @@ import {UserService} from './services/user-service';
   providers: [
     AuthService,
     PushNotificationService,
-    UserService
+    UserService,
+    SharedService
   ],
   bootstrap: [AppComponent]
 })

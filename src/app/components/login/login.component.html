@@ -1,12 +1,17 @@
 <div class="login">
+  <div class="center-middle column">
+    <div class="title">
+      Sign In
+    </div>
     <form class="form">
       <mat-form-field class="full-width">
-        <input matInput placeholder="Email">
+        <input matInput placeholder="Email" name="email" [(ngModel)]="user.email">
       </mat-form-field>
 
       <mat-form-field class="full-width">
-         <input matInput type="password" placeholder="Password">
+         <input matInput type="password" name="password" placeholder="Password" [(ngModel)]="user.password">
       </mat-form-field>
+      <button mat-flat-button (click)="signInWithEmail()" [disabled]="(user.email === '' || user.password === '')">Sign In</button>
     </form>
+  </div>
 </div>
-<button mat-flat-button>Basic</button>
