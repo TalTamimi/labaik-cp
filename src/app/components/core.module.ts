@@ -9,6 +9,7 @@ import { BackgroundComponent } from './background/background.component';
 import { LoadingComponent } from './loading/loading.component';
 import {NotificationCpComponent} from './notification-cp/notification-cp.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { IndicesComponent } from './indices/indices.component';
 import {FormsModule} from '@angular/forms';
 
 @NgModule({
@@ -26,7 +27,8 @@ import {FormsModule} from '@angular/forms';
     BackgroundComponent,
     LoadingComponent,
     NotificationCpComponent,
-    DashboardComponent
+    DashboardComponent,
+    IndicesComponent
   ],
   exports: [
     LandingComponent,
