@@ -10,6 +10,7 @@ import { BackgroundComponent } from './background/background.component';
 import { LoadingComponent } from './loading/loading.component';
 import {NotificationCpComponent} from './notification-cp/notification-cp.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { IndicesComponent } from './indices/indices.component';
 import {FormsModule} from '@angular/forms';
 import { NavComponent } from './nav/nav.component';
 
@@ -30,6 +31,7 @@ import { NavComponent } from './nav/nav.component';
     LoadingComponent,
     NotificationCpComponent,
     DashboardComponent,
+    IndicesComponent,
     NavComponent
   ],
   exports: [

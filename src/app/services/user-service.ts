@@ -13,4 +13,10 @@ export class UserService {
     headers = headers.append('Content-Type', 'application/json');
     return this.http.get('https://hajj-hackathon1.firebaseio.com/users.json', {headers: headers});
   }
+
+  getIndices() {
+    let headers = new HttpHeaders();
+    // headers = headers.append('Content-Type', 'application/json');
+    return this.http.get('http://localhost:8080/indexes');
+  }
 }
